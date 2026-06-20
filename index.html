@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClauseGuard AI - Smart Legal Risk Detector Portfolio</title>
+  <meta name="description" content="Portfolio showcase of ClauseGuard AI, an intelligent scanner that parses legal documents, highlights risky clauses, and explains liabilities.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Backgroundglow circles -->
+  <div class="bg-glow-container">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+  </div>
+
+  <!-- Navigation -->
+  <navbar>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>ClauseGuard AI</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">Interactive Sandbox</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#code">Code Library</a></li>
+      </ul>
+      <a href="#demo" class="btn-primary">
+        <span>Launch Sandbox</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </navbar>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-grid">
+      <div class="hero-content fade-in">
+        <span class="section-tag">AI Legal Intelligence</span>
+        <h1>Contract Analysis, <span>Reimagined.</span></h1>
+        <p>An intelligent document assistant that parses complex legal contracts, highlights risky liabilities (like aggressive non-competes or perpetual terms), and details critical explanations instantly using local LLMs & RAG.</p>
+        
+        <div class="hero-actions">
+          <a href="#demo" class="btn-primary">
+            <span>Analyze a Contract</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </a>
+          <a href="#code" class="btn-secondary">
+            <span>Explore Github</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <span class="hero-badge-val">2.4s</span>
+            <span class="hero-badge-lbl">Scan Duration</span>
+          </div>
+          <div class="hero-badge-item">
+            <span class="hero-badge-val">96%</span>
+            <span class="hero-badge-lbl">Recall Accuracy</span>
+          </div>
+          <div class="hero-badge-item">
+            <span class="hero-badge-val">100%</span>
+            <span class="hero-badge-lbl">Local Privacy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-mockup-wrapper">
+        <div class="hero-mockup">
+          <div class="scan-line"></div>
+          <div class="hero-mockup-header">
+            <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="mockup-title">NDA_DRAFT_V2.pdf</div>
+            <div style="width: 24px;"></div>
+          </div>
+          <div class="hero-mockup-content">
+            <div class="mock-line w-80"></div>
+            <div class="mock-line w-90"></div>
+            <div class="mock-highlight">
+              <div class="mock-line w-70"></div>
+              <div class="mock-highlight-inner">
+                <span class="mock-tag">High Risk</span>
+                <div class="mock-line w-20" style="margin-top: 0;"></div>
+              </div>
+            </div>
+            <div class="mock-line w-90"></div>
+            <div class="mock-line w-60"></div>
+            <div class="mock-line w-80"></div>
+          </div>
+        </div>
+
+        <!-- Floating indicators -->
+        <div class="floating-card-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <span style="font-size: 0.8rem; font-weight:600; color: #10b981;">No Indefinite Term found</span>
+        </div>
+        <div class="floating-card-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <span style="font-size: 0.8rem; font-weight:600; color: #f59e0b;">Broad IP Clause scanned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features ("Why It Wins") -->
+  <section id="features" class="container">
+    <span class="section-tag">Value Proposition</span>
+    <h2 class="section-title">Why ClauseGuard Wins</h2>
+    <p class="section-subtitle">A combination of high-value legal automation, local LLM architectures, and a flawless user experience.</p>
+    
+    <div class="features-grid">
+      <div class="glass-card feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>High-Value Business Utility</h3>
+        <p>Helps legal ops, freelancers, and small businesses catch dangerous obligations (perpetual terms, broad IP forfeitures, or strict non-competes) before signing contracts.</p>
+      </div>
+
+      <div class="glass-card feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        </div>
+        <h3>Retrieval-Augmented (RAG)</h3>
+        <p>Rather than analyzing the whole text directly (saving context window cost), it uses local embedding search in ChromaDB to retrieve relevant clauses instantly based on a scanning policy.</p>
+      </div>
+
+      <div class="glass-card feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h3>100% Local Privacy</h3>
+        <p>Leveraging local embeddings & Llama 3 via Ollama, sensitive commercial legal documents never leave the enterprise machine—eliminating cloud data compliance hazards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sandbox Demo -->
+  <section id="demo" class="container">
+    <span class="section-tag">Interactive Preview</span>
+    <h2 class="section-title">Test the Sandbox Sandbox</h2>
+    <p class="section-subtitle">Pick a contract sample, click 'Run Scan', and click on the highlighted terms to view the AI's explanation panel.</p>
+
+    <div class="glass-card sandbox-card">
+      <div class="sandbox-header">
+        <div class="sandbox-title-container">
+          <span class="sandbox-pulse"></span>
+          <span style="font-weight: 600; font-family: var(--font-heading); font-size: 1.05rem;">ClauseGuard Scanner Simulator</span>
+        </div>
+        <div class="sandbox-controls">
+          <select id="contract-select" class="sandbox-select">
+            <option value="none">-- Choose a Contract --</option>
+            <option value="nda">Mutual Non-Disclosure Agreement (NDA)</option>
+            <option value="freelance">Freelance Software Services Contract</option>
+          </select>
+          <button id="scan-btn" class="btn-primary" style="padding: 0.45rem 1.2rem; font-size: 0.85rem;" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            <span>Scan Contract</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sandbox-body">
+        <!-- Document Display Panel -->
+        <div class="sandbox-left">
+          <div class="sandbox-doc-header">
+            <span class="sandbox-doc-name" id="doc-title-display">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>No document loaded</span>
+            </span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);" id="char-counter">0 characters</span>
+          </div>
+          
+          <div class="sandbox-doc-view" id="document-text-container">
+            <div class="empty-state">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              <p>Select a contract draft above to import it into the AI engine</p>
+            </div>
+          </div>
+
+          <!-- Loading Scan Animation overlay -->
+          <div class="scan-overlay" id="scan-loading-overlay" style="display: none; opacity: 0;">
+            <div class="scan-spinner"></div>
+            <div class="scan-text">AI Vector Search & Risk Scan in progress...</div>
+          </div>
+        </div>
+
+        <!-- Risks & Explanations Panel -->
+        <div class="sandbox-right">
+          <div class="sandbox-analysis-header">
+            <span>Risk Highlights</span>
+            <span class="analysis-summary-pill" id="risk-summary-pill">0 Issues Found</span>
+          </div>
+          
+          <div class="sandbox-analysis-results" id="analysis-results-container">
+            <div class="empty-state">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <p style="font-size: 0.85rem;">Run the AI Scan to generate risk card explanations here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Flow -->
+  <section id="architecture" class="container">
+    <span class="section-tag">System Design</span>
+    <h2 class="section-title">Architectural Flow & Tech Stack</h2>
+    <p class="section-subtitle">How files route, partition, embed into vectors, and evaluate risks on a local pipeline.</p>
+    
+    <div class="arch-grid">
+      <!-- Step flow -->
+      <div class="flow-steps">
+        <div class="flow-line"></div>
+        
+        <div class="flow-step">
+          <div class="flow-num">01</div>
+          <h4>Upload</h4>
+          <p>User feeds PDF/DOCX contract via Streamlit UI.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-num">02</div>
+          <h4>Parse</h4>
+          <p>Text extraction using PyPDF2 and pdfplumber.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-num">03</div>
+          <h4>Embed</h4>
+          <p>Splits into chunks, encoded via HuggingFace models.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-num">04</div>
+          <h4>Store</h4>
+          <p>Chunk embeddings indexed into local ChromaDB.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-num">05</div>
+          <h4>RAG query</h4>
+          <p>Risk queries select key chunks from vector space.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-num">06</div>
+          <h4>LLM Scan</h4>
+          <p>Llama 3 scans chunks, outputting JSON risks.</p>
+        </div>
+      </div>
+
+      <!-- Tech Stack Cards -->
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>Python 3.10+</h4>
+          <p>Core AI environment</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+          </div>
+          <h4>Streamlit</h4>
+          <p>Rapid UX interface</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.82 10.82a1.5 1.5 0 0 0 0 2.36l5.44 3.9a1.5 1.5 0 0 0 1.76 0l5.44-3.9a1.5 1.5 0 0 0 0-2.36l-5.44-3.9a1.5 1.5 0 0 0-1.76 0l-5.44 3.9z"></path></svg>
+          </div>
+          <h4>LangChain</h4>
+          <p>RAG pipeline engine</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h4>Llama 3</h4>
+          <p>Ollama/Local LLM</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+          </div>
+          <h4>ChromaDB</h4>
+          <p>Vector Storage DB</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Showcase -->
+  <section id="code" class="container">
+    <span class="section-tag">Implementation Details</span>
+    <h2 class="section-title">Core Implementation Code</h2>
+    <p class="section-subtitle">Clean modular Python chunks showcasing extraction, vector database embedding, and the RAG model pipeline.</p>
+
+    <div class="code-wrapper">
+      <div class="code-tabs">
+        <button class="code-tab active" data-tab="extractor">PDF Extractor</button>
+        <button class="code-tab" data-tab="chroma">RAG Embedder</button>
+        <button class="code-tab" data-tab="prompt">LLM Evaluator</button>
+      </div>
+      
+      <div class="code-body">
+        <!-- Extractor Tab -->
+        <pre class="code-pre" id="code-content-extractor"><span class="keyword">import</span> pdfplumber
+<span class="keyword">from</span> docx <span class="keyword">import</span> Document
+
+<span class="keyword">def</span> <span class="function">extract_document_text</span>(file_path: <span class="builtin">str</span>) -> <span class="builtin">str</span>:
+    <span class="comment">"""Extracts plaintext cleanly from PDF or DOCX file formats."""</span>
+    text = <span class="string">""</span>
+    
+    <span class="keyword">if</span> file_path.endswith(<span class="string">".pdf"</span>):
+        <span class="keyword">with</span> pdfplumber.open(file_path) <span class="keyword">as</span> pdf:
+            <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:
+                text += page.extract_text() <span class="keyword">or</span> <span class="string">""</span>
+                
+    <span class="keyword">elif</span> file_path.endswith(<span class="string">".docx"</span>):
+        doc = Document(file_path)
+        text = <span class="string">"\n"</span>.join([p.text <span class="keyword">for</span> p <span class="keyword">in</span> doc.paragraphs])
+        
+    <span class="keyword">return</span> text.strip()</pre>
+
+        <!-- Chroma Tab (hidden at start) -->
+        <pre class="code-pre" id="code-content-chroma" style="display: none;"><span class="keyword">from</span> langchain_text_splitters <span class="keyword">import</span> RecursiveCharacterTextSplitter
+<span class="keyword">from</span> langchain_community.vectorstores <span class="keyword">import</span> Chroma
+<span class="keyword">from</span> langchain_community.embeddings <span class="keyword">import</span> HuggingFaceEmbeddings
+
+<span class="keyword">def</span> <span class="function">embed_contract_chunks</span>(text: <span class="builtin">str</span>) -> Chroma:
+    <span class="comment">"""Splits documents into overlapping chunks and stores in memory ChromaDB."""</span>
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=<span class="number">500</span>,
+        chunk_overlap=<span class="number">100</span>,
+        length_function=<span class="builtin">len</span>
+    )
+    chunks = splitter.create_documents([text])
+    
+    embeddings = HuggingFaceEmbeddings(model_name=<span class="string">"all-MiniLM-L6-v2"</span>)
+    vectorstore = Chroma.from_documents(
+        documents=chunks,
+        embedding=embeddings
+    )
+    <span class="keyword">return</span> vectorstore</pre>
+
+        <!-- Prompt Tab (hidden at start) -->
+        <pre class="code-pre" id="code-content-prompt" style="display: none;"><span class="keyword">from</span> langchain.chains <span class="keyword">import</span> RetrievalQA
+<span class="keyword">from</span> langchain_core.prompts <span class="keyword">import</span> PromptTemplate
+
+<span class="keyword">def</span> <span class="function">evaluate_risk_clauses</span>(vectorstore, query: <span class="builtin">str</span>, llm) -> <span class="builtin">str</span>:
+    <span class="comment">"""Queries RAG context and instructs Llama 3 to flag legal risks."""</span>
+    template = <span class="string">"""You are a professional corporate lawyer. Use the contract context below:
+    
+    Context: {context}
+    
+    Question: {question}
+    
+    Identify all risky liabilities (Non-compete, perpetual obligations, unclear IP rights).
+    Return your answer strictly in valid JSON format:
+    {{
+       "risks": [
+          {{"clause": "exact sentence text", "risk": "High|Medium|Low", "explanation": "why..."}}
+       ]
+    }}
+    """</span>
+    prompt = PromptTemplate.from_template(template)
+    qa_chain = RetrievalQA.from_chain_type(
+        llm=llm,
+        retriever=vectorstore.as_retriever(search_kwargs={{<span class="string">"k"</span>: <span class="number">4</span>}}),
+        chain_type_kwargs={{<span class="string">"prompt"</span>: prompt}}
+    )
+    <span class="keyword">return</span> qa_chain.run(query)</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="#" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>ClauseGuard AI</span>
+        </a>
+        <p>A portfolio project demonstrating production-ready integration of local Large Language Models (LLM), Retrieval-Augmented Generation (RAG), and security-focused document parsing.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end;">
+        <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Designed & Engineered by</span>
+        <span style="font-size: 1.1rem; color: var(--text-primary); font-weight: 700; margin-top: 0.25rem; font-family: var(--font-heading);">Dhruv Singh</span>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <span>&copy; 2026 ClauseGuard AI. Open source MIT License.</span>
+      <span>Build: v1.0.0 (Local Streamlit + Llama 3 Stack)</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
